@@ -17,3 +17,8 @@ output "ecr_repository_url" {
   description = "ECR Repository URL"
   value       = aws_ecr_repository.repository.repository_url
 }
+
+output "ssm_active_container_tag" {
+  description = "SSM Arn for active container tag"
+  value = aws_ssm_parameter.active_docker_tag.arn
+}
