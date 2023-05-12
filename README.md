@@ -26,7 +26,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_access_allowed_aws_account_ids"></a> [access\_allowed\_aws\_account\_ids](#input\_access\_allowed\_aws\_account\_ids) | A list of AWS account IDs that are allowed to access the repository | `list(string)` | `[]` | no |
 | <a name="input_repository_name"></a> [repository\_name](#input\_repository\_name) | The ECR repository name | `string` | n/a | yes |
 
 ## Outputs
