@@ -11,4 +11,8 @@ resource "aws_ssm_parameter" "active_docker_tag" {
   name  = "ECR/${var.repository_name}/ActiveTag"
   description = "Active container tag in the ${var.repository_name} ECR repository"
   type  = "String"
+  value = "stable"
+  lifecycle {
+    ignore_changes = [value]
+  }
 }
