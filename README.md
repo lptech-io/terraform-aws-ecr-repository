@@ -32,9 +32,9 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_ecr_repository_arn"></a> [ecr\_repository\_arn](#output\_ecr\_repository\_arn) | ECR Repository ARN |
-| <a name="output_ecr_repository_id"></a> [ecr\_repository\_id](#output\_ecr\_repository\_id) | ECR Repository Id |
-| <a name="output_ecr_repository_name"></a> [ecr\_repository\_name](#output\_ecr\_repository\_name) | ECR Repository Name |
-| <a name="output_ecr_repository_url"></a> [ecr\_repository\_url](#output\_ecr\_repository\_url) | ECR Repository URL |
+| <a name="output_arn"></a> [arn](#output\_arn) | ECR Repository ARN |
+| <a name="output_id"></a> [id](#output\_id) | ECR Repository Id |
+| <a name="output_name"></a> [name](#output\_name) | ECR Repository Name |
 | <a name="output_ssm_active_container_tag"></a> [ssm\_active\_container\_tag](#output\_ssm\_active\_container\_tag) | SSM Arn for active container tag |
+| <a name="output_url"></a> [url](#output\_url) | ECR Repository URL |
 <!-- END_TF_DOCS -->
