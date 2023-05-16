@@ -8,7 +8,7 @@ resource "aws_ecr_repository" "repository" {
 }
 
 resource "aws_ssm_parameter" "active_docker_tag" {
-  name  = "ECR/${var.repository_name}/ActiveTag"
+  name  = "/Ecr/${var.repository_name}/ActiveTag"
   description = "Active container tag in the ${var.repository_name} ECR repository"
   type  = "String"
   value = "${aws_ecr_repository.repository.arn}:init"
