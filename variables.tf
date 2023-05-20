@@ -10,8 +10,4 @@ variable "image_tag_mutability" {
 variable "repository_name" {
   description = "The ECR repository name"
   type        = string
-  validation {
-    condition = can(regex("?:[a-z0-9]+(?:[._-][a-z0-9]+)*/)*[a-z0-9]+(?:[._-][a-z0-9]+)*", var.repository_name))
-    error_message = "Repository name follow the regex '?:[a-z0-9]+(?:[._-][a-z0-9]+)*/)*[a-z0-9]+(?:[._-][a-z0-9]+)*'"
-  }
 }
