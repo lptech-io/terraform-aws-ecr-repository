@@ -3,15 +3,15 @@ resource "aws_ecr_repository" "repository" {
   image_scanning_configuration {
     scan_on_push = true
   }
-  image_tag_mutability = "IMMUTABLE"
+  image_tag_mutability = var.image_tag_mutability
   name                 = var.repository_name
 }
 
 resource "aws_ssm_parameter" "active_docker_tag" {
-  name  = "/Ecr/${var.repository_name}/ActiveTag"
-  description = "Active container tag in the ${var.repository_name} ECR repository"
+  name  = "/ECR/${title(var.repository_name)}/ActiveTag"
+  description = "Active container tag for ${var.repository_name} ECR repository"
   type  = "String"
-  value = "${aws_ecr_repository.repository.arn}:init"
+  value = "${aws_ecr_repository.repository.repository_url}:init"
   lifecycle {
     ignore_changes = [value]
   }
