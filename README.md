@@ -1,3 +1,4 @@
+<!-- BEGIN_TF_DOCS -->
 # AWS ECR Repository terraform module
 Terraform module which creates ECR repository resource on AWS and a dedicated SSM parameter where store the container active tag.
 
@@ -9,8 +10,8 @@ module "ecr-repository" {
   repository_name = "demo"
 }
 ```
+
 ## Requirements
----
 
 | Name | Version |
 |------|---------|
@@ -49,3 +50,4 @@ No modules.
 | <a name="output_name"></a> [name](#output\_name) | ECR Repository Name |
 | <a name="output_ssm_active_container_tag"></a> [ssm\_active\_container\_tag](#output\_ssm\_active\_container\_tag) | SSM Arn for active container tag |
 | <a name="output_url"></a> [url](#output\_url) | ECR Repository URL |
+<!-- END_TF_DOCS -->
