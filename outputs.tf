@@ -20,5 +20,5 @@ output "url" {
 
 output "ssm_active_container_tag" {
   description = "SSM Arn for active container tag"
-  value = aws_ssm_parameter.active_docker_tag.name
+  value       = aws_ssm_parameter.active_docker_tag.name
 }
