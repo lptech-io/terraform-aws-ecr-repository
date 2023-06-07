@@ -16,9 +16,3 @@ resource "aws_ssm_parameter" "active_docker_tag" {
     ignore_changes = [value]
   }
 }
-
-resource "dockerless_remote_image" "init_image_creation" {
-  count  = var.is_for_lambda_deployment ? 1 : 0
-  source = "alpine:latest"
-  target = "${aws_ecr_repository.repository.repository_url}:init"
-}
