@@ -16,3 +16,22 @@ resource "aws_ssm_parameter" "active_docker_tag" {
     ignore_changes = [value]
   }
 }
+
+resource "aws_ecr_lifecycle_policy" "maintain_x_images" {
+  count      = var.lifecycle_rule.enabled ? 1 : 0
+  repository = aws_ecr_repository.repository.name
+  policy     = jsonencode({
+    rules = [{
+      rulePriority = 1
+      description  = "Keep last ${var.lifecycle_rule.images_to_maintain} images"
+      selection = {
+        tagStatus   = "any"
+        countType   = "imageCountMoreThan"
+        countNumber = var.lifecycle_rule.images_to_maintain
+      }
+      action = {
+        type = "expire"
+      }
+    }]
+  })
+}
