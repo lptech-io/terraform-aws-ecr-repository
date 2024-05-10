@@ -24,3 +24,9 @@ variable "repository_name" {
   description = "The ECR repository name"
   type        = string
 }
+
+variable "ssm_parameter_name" {
+  default = ""
+  description = "Name of SSM parameter where store the image tag"
+  type = string
+}

@@ -30,6 +30,7 @@ No modules.
 | <a name="input_image_tag_mutability"></a> [image\_tag\_mutability](#input\_image\_tag\_mutability) | Set image tag immutabile or not | `string` | `"IMMUTABLE"` | no |
 | <a name="input_lifecycle_rule"></a> [lifecycle\_rule](#input\_lifecycle\_rule) | Controller for lifecycle rule | <pre>object({<br>    enabled = optional(bool, true)<br>    images_to_maintain = optional(number, 30)<br>  })</pre> | <pre>{<br>  "enabled": true,<br>  "images_to_maintain": 30<br>}</pre> | no |
 | <a name="input_repository_name"></a> [repository\_name](#input\_repository\_name) | The ECR repository name | `string` | n/a | yes |
+| <a name="input_ssm_parameter_name"></a> [ssm\_parameter\_name](#input\_ssm\_parameter\_name) | Name of SSM parameter where store the image tag | `string` | `""` | no |
 
 ## Outputs
 
